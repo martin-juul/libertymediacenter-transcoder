@@ -17,14 +17,19 @@ export const ffprobe = (filePath: string): Promise<FFProbeResult> => {
     ffmpeg(filePath)
       .ffprobe(((err, data) => {
         if (err) reject(err);
+        if (data === undefined || data.streams === undefined || data.format === undefined || data.chapters === undefined) {
+          reject(new Error('Unknown error'));
+        } else {
+          const result: FFProbeResult = {
+            streams: data.streams as Stream[],
+            format: data.format as Format,
+            chapters: data.chapters,
+          };
 
-        const result: FFProbeResult = {
-          streams: data.streams as Stream[],
-          format: data.format as Format,
-          chapters: data.chapters,
-        };
+          resolve(result);
+        }
 
-        resolve(result);
+        resolve(null);
       }));
   }));
 };
