@@ -1,0 +1,31 @@
+{
+  "name": "liberty-transcoder",
+  "version": "1.0.0",
+  "main": "main.js",
+  "author": "Martin Juul",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start:dev": "nodemon"
+  },
+  "dependencies": {
+    "@types/cote": "^0.19.0",
+    "@types/fluent-ffmpeg": "^2.1.9",
+    "@types/fs-extra": "^5.0.5",
+    "cote": "^0.19.1",
+    "cross-env": "^5.2.0",
+    "dotenv": "^6.2.0",
+    "fluent-ffmpeg": "^2.1.2",
+    "fs-extra": "^7.0.1",
+    "pm2": "^3.3.1",
+    "ts-log-debug": "^4.0.4"
+  },
+  "devDependencies": {
+    "@types/dotenv": "^6.1.0",
+    "@types/node": "^11.10.4",
+    "nodemon": "^1.18.10",
+    "ts-node": "^8.0.2",
+    "tslint": "^5.13.1",
+    "typescript": "^3.3.3333"
+  }
+}
