@@ -1,6 +1,8 @@
+> :warning: **EXPERIMENTAL**: It's not even close to be considered for use. It can start transcodes, and seeking works. It's just very unstable. Expect it to crash and make your CPU hurt. It doesn't cleanup ffmpeg processes if you kill the app. So you have to pkill them yourself.
+
 # libertymediacenter/transcoder
 
-Transcode service for LibertyMediaCenter. Features auto discovery of the main [api server](https://github.com/libertymediacenter/api)
+Transcode service for LibertyMediaCenter. Features auto discovery of the main [api server](https://github.com/martin-juul/libertymediacenter-api)
 
 ## Development
 
